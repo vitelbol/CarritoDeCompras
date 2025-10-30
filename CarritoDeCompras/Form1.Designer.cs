@@ -32,6 +32,8 @@
             btnAgregar = new Button();
             btnCalcular = new Button();
             cboProductos = new ComboBox();
+            label1 = new Label();
+            txtCodigoDescuento = new TextBox();
             SuspendLayout();
             // 
             // listCarritoDeCompras
@@ -44,7 +46,7 @@
             // 
             // btnAgregar
             // 
-            btnAgregar.Location = new Point(311, 185);
+            btnAgregar.Location = new Point(283, 114);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(75, 23);
             btnAgregar.TabIndex = 1;
@@ -54,7 +56,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(402, 185);
+            btnCalcular.Location = new Point(376, 114);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(103, 23);
             btnCalcular.TabIndex = 2;
@@ -70,11 +72,29 @@
             cboProductos.Size = new Size(194, 23);
             cboProductos.TabIndex = 3;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(269, 162);
+            label1.Name = "label1";
+            label1.Size = new Size(126, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Codigo de descuento: ";
+            // 
+            // txtCodigoDescuento
+            // 
+            txtCodigoDescuento.Location = new Point(401, 162);
+            txtCodigoDescuento.Name = "txtCodigoDescuento";
+            txtCodigoDescuento.Size = new Size(127, 23);
+            txtCodigoDescuento.TabIndex = 5;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(522, 416);
+            ClientSize = new Size(540, 416);
+            Controls.Add(txtCodigoDescuento);
+            Controls.Add(label1);
             Controls.Add(cboProductos);
             Controls.Add(btnCalcular);
             Controls.Add(btnAgregar);
@@ -83,6 +103,7 @@
             Text = "Form1";
             Load += Form1_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -91,5 +112,7 @@
         private Button btnAgregar;
         private Button btnCalcular;
         private ComboBox cboProductos;
+        private Label label1;
+        private TextBox txtCodigoDescuento;
     }
 }

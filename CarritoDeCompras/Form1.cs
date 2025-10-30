@@ -29,18 +29,28 @@ namespace CarritoDeCompras
                 string productoElegido = listCarritoDeCompras.Items[i].ToString();
                 if (productoElegido == "Pantalon")
                 {
-                    precioFinal +=20;
+                    precioFinal += 20;
                 }
-                if(productoElegido == "Camisa")
+                if (productoElegido == "Camisa")
                 {
                     precioFinal += 35;
                 }
-                if(productoElegido == "Zapatos")
+                if (productoElegido == "Zapatos")
                 {
                     precioFinal += 24;
                 }
             }
-            MessageBox.Show("El precio final es: Bs."+precioFinal);
+            if (txtCodigoDescuento.Text == "NAVIDAD")
+            {
+                precioFinal = precioFinal * 0.9;
+            }
+            else
+            {
+                MessageBox.Show("El codigo de descuento es erroneo");
+            }
+            MessageBox.Show("El precio final es: Bs." + precioFinal);
         }
+
+        
     }
 }
