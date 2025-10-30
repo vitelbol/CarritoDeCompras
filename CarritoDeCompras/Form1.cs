@@ -13,5 +13,11 @@ namespace CarritoDeCompras
             cboProductos.Items.Add("Camisa");
             cboProductos.Items.Add("Zapatos");
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            string productoSeleccionado = cboProductos.SelectedItem.ToString();
+            listCarritoDeCompras.Items.Add(productoSeleccionado);
+        }
     }
 }
