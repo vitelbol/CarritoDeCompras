@@ -19,5 +19,28 @@ namespace CarritoDeCompras
             string productoSeleccionado = cboProductos.SelectedItem.ToString();
             listCarritoDeCompras.Items.Add(productoSeleccionado);
         }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            double precioFinal = 0;
+            int totalProductosCargados = listCarritoDeCompras.Items.Count;
+            for (int i = 0; i < totalProductosCargados; i++)
+            {
+                string productoElegido = listCarritoDeCompras.Items[i].ToString();
+                if (productoElegido == "Pantalon")
+                {
+                    precioFinal +=20;
+                }
+                if(productoElegido == "Camisa")
+                {
+                    precioFinal += 35;
+                }
+                if(productoElegido == "Zapatos")
+                {
+                    precioFinal += 24;
+                }
+            }
+            MessageBox.Show("El precio final es: Bs."+precioFinal);
+        }
     }
 }

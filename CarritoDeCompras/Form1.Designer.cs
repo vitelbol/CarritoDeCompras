@@ -60,6 +60,7 @@
             btnCalcular.TabIndex = 2;
             btnCalcular.Text = "Calcular Precio";
             btnCalcular.UseVisualStyleBackColor = true;
+            btnCalcular.Click += btnCalcular_Click;
             // 
             // cboProductos
             // 
